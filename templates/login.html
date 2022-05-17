@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/signin.css">
+{% endblock %}
+{% block body %}
+    <main class="form-signin w-100 m-auto text-center">
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="/static/3F3F3F3F3F_3F_3F3F3F3F3F3F-removebg-preview.png" alt="" width="72"
+                 height="57">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+            <div class="form-floating">
+                {{ form.username(class_="form-control", id_="floatingInput", size=32) }}
+                <label for="floatingInput">Login</label>
+            </div>
+            <div class="form-floating">
+                {{ form.password(class_="form-control", id_="floatingInput", size=32) }}
+                <label for="floatingInput">Password</label>
+            </div>
+
+            {{ form.submit(class_="w-100 btn btn-lg btn-primary") }}
+            <p class="mt-5 mb-3 text-muted">slepenkov</p>
+
+        </form>
+    </main>
+{% endblock %}
